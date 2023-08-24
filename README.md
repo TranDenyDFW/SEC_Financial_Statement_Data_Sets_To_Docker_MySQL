@@ -27,7 +27,7 @@ py fsds.py
 
 # EXPLORE DATA
 [num tables will be fairly large - approximating 2M to 3M rows each quarter, starting in late 2011]
-![row_count](2022q1-row-count.png)
+![table_summ](tables-summary-sample.png)
 
 # NUM
 ![NUM](2022q1-num-data-sample.png)
