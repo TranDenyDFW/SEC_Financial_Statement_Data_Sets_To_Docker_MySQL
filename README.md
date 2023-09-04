@@ -17,12 +17,12 @@ PYTHON3: https://www.python.org/downloads/
 
 # CREATE AND RUN MYSQL DOCKER
 docker run --name sec-mysql-db -e "MYSQL_ROOT_PASSWORD=Mypass123456" -p 3306:3306 -d mysql:latest  
-[create virtual environment and install requirements if desired]  
+[create virtual environment and install requirements]  
 
 # DOWNLOAD A COPY OF fsds.py
 [fsds.py](https://github.com/TranDenyDFW/SEC_Financial_Statement_Data_Sets_To_Docker_MySQL/blob/main/fsds.py)  
 
-# RUN APP (make any desired changes, mentioned in notes above, prior to running app)
+# RUN APP [make desired changes, mentioned in notes above, prior to running app]
 py fsds.py  
 
 # EXPLORE DATA
