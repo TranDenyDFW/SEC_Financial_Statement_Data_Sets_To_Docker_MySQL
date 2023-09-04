@@ -8,41 +8,41 @@ notes:
    - this is less likely due to the parsing method used and more likely caused by the 'incompleteness' of data during earlier years
    - values are, for the most part, defined as varchar's, which will be updated either by:
      (a) separately after insert, or
-     (b) original code modification
+     (b) original code modification  
      [this will be completed once a better idea of where the majority of the issue lies, and/or a better understanding of the dataset is achieved]
 
 # DOWNLOAD REQUIRED APPLICATIONS IF NEEDED
-DOCKER: https://www.docker.com/products/docker-desktop/
-PYTHON3: https://www.python.org/downloads/
+DOCKER: https://www.docker.com/products/docker-desktop/  
+PYTHON3: https://www.python.org/downloads/  
 
 # CREATE AND RUN MYSQL DOCKER
-docker run --name sec-mysql-db -e "MYSQL_ROOT_PASSWORD=Mypass123456" -p 3306:3306 -d mysql:latest
-[create virtual environment and install requirements if desired]
+docker run --name sec-mysql-db -e "MYSQL_ROOT_PASSWORD=Mypass123456" -p 3306:3306 -d mysql:latest  
+[create virtual environment and install requirements if desired]  
 
 # DOWNLOAD A COPY OF fsds.py
-[fsds.py](https://github.com/TranDenyDFW/SEC_Financial_Statement_Data_Sets_To_Docker_MySQL/blob/main/fsds.py)
+[fsds.py](https://github.com/TranDenyDFW/SEC_Financial_Statement_Data_Sets_To_Docker_MySQL/blob/main/fsds.py)  
 
 # RUN APP (make any desired changes, mentioned in notes above, prior to running app)
-py fsds.py
+py fsds.py  
 
 # EXPLORE DATA
-[num tables will be fairly large - approximating 2M to 3M rows each quarter, starting in late 2011]
-![table_summ](tables-summary-sample.png)
+[num tables will be fairly large - approximating 2M to 3M rows each quarter, starting in late 2011]  
+![table_summ](tables-summary-sample.png)  
 
 # NUM
-![NUM](2022q1-num-data-sample.png)
+![NUM](2022q1-num-data-sample.png)  
 
 # PRE
-![PRE](2022q1-pre-data-sample.png)
+![PRE](2022q1-pre-data-sample.png)  
 
 # SUB
-![SUB](2022q1-sub-data-sample.png)
+![SUB](2022q1-sub-data-sample.png)  
 
 # TAG
-![TAG](2022q1-tag-data-sample.png)
+![TAG](2022q1-tag-data-sample.png)  
 
 
 # DO SOMETHING WITH DATA
-...
+...  
 
 
