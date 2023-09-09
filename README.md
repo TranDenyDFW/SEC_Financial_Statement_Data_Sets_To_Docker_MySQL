@@ -46,5 +46,7 @@ py fsds.py
 
 # DO SOMETHING WITH DATA
 ...  
+EXAMPLE SQL FILE: [ex1.sql](https://github.com/TranDenyDFW/SEC_Financial_Statement_Data_Sets_To_Docker_MySQL/blob/main/ex1.sql)
+![ex1](ex1.png)  
 
 
