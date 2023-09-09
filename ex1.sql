@@ -7,8 +7,7 @@ DROP TABLE IF EXISTS tmp_tbl2;
 DROP TABLE IF EXISTS tmp_tbl3;
 
 CREATE TABLE tmp_tbl1 AS
-  SELECT name,
-         Concat(' [', sec_sic.industry, ']') indus,
+  SELECT Concat(name, ' [', sec_sic.industry, ']') AS name_industry,
          adsh,
          fye,
          form,
@@ -54,18 +53,16 @@ SET @max_year = (SELECT max(substring(ddate, 1, 4)) FROM tmp_tbl3);
 SET @second_max_year = (SELECT max(substring(ddate, 1, 4)) FROM tmp_tbl3 WHERE
 substring(ddate, 1, 4) <> @max_year);
 
-SET @company_name = (SELECT name FROM tmp_tbl1 LIMIT 1);
+SET @company_name_industry = (SELECT name_industry FROM tmp_tbl1 LIMIT 1);
 
-SET @company_industry = (SELECT indus FROM tmp_tbl1 LIMIT 1);
-
-SELECT ' '               AS line,
-       @company_name     AS tag,
-       @company_industry AS plabel,
-       ' '               AS uom,
-       ' '               AS fy_t,
-       ' '               AS 'fy_t-1',
-       ' '               AS footnote_t,
-       ' '               AS 'footnote_t-1'
+SELECT ' '                    AS line,
+       @company_name_industry AS tag,
+       ' '                    AS plabel,
+       ' '                    AS uom,
+       ' '                    AS fy_t,
+       ' '                    AS 'fy_t-1',
+       ' '                    AS footnote_t,
+       ' '                    AS 'footnote_t-1'
 UNION
 SELECT tmp_tbl2.line,
        tag,
@@ -92,7 +89,7 @@ GROUP  BY tmp_tbl2.line,
           uom,
           tag,
           plabel
-ORDER  BY line;
+ORDER  BY Cast(line AS signed);
 
 DROP TABLE IF EXISTS tmp_tbl1;
 
