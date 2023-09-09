@@ -1,3 +1,5 @@
+pst...want to dive right in without the hassle of retrieving the data? if you follow this link here &#9758; [sql_files](https://1drv.ms/f/s!Aqm-BwLD86xdgebfPunR3faRAV6tXhg?e=vhDIi1), you'll find a consolidated version of this dataset for public use &#128077;&#128077;&#128077; (see bottom of page for an example)     
+
 # SEC_Financial_Statement_Data_Sets_To_Docker_MySQL
 notes: 
  - username/password placed in .py file for simplicity
